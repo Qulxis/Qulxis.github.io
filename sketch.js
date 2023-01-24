@@ -2,7 +2,7 @@ function setup() {
 	createCanvas(600, 240);
 	angleMode(DEGREES);
   }
-
+p_again = 0; // stops logging more than once
 function draw() {
 	
 	// textSize(32);
@@ -15,12 +15,26 @@ function draw() {
 	// background(0);
   	translate(0, 240);
   	rotate(-90);
+	
 	let hr = hour();
 	let mn = minute();
 	let sc = second();
+	temp = sc; // track temp
+	// console.log(p_again);
+
+
+
 	if (sc==0) {
-		console.log(mn)
+		if (p_again==0){
+			p_again +=1;
+			console.log(mn);
+		}
+
 	}
+	else{
+		p_again = 0;
+	}
+
 	// let dy = day();
 
 	// Background, sunny if during sun, dark during dark
