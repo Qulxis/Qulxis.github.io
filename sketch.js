@@ -27,7 +27,7 @@ function draw() {
 	if (sc==0) {
 		if (p_again==0){
 			p_again +=1;
-			console.log(mn);
+			console.log('minute',mn);
 		}
 
 	}
